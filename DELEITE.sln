@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DELEITE.Android", "DELEITE\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DELEITE.iOS", "DELEITE\DELEITE.iOS\DELEITE.iOS.csproj", "{15A9D75B-9DAF-472B-A8D7-4CA805541231}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DELEITE", "DELEITE\DELEITE\DELEITE.csproj", "{DA9C6736-A8EC-4EFB-A740-247D713EB3F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DELEITE", "DELEITE\DELEITE\DELEITE.csproj", "{DA9C6736-A8EC-4EFB-A740-247D713EB3F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BFB4EB4E-580F-4D3B-AF19-D8A283083883}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

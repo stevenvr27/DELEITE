@@ -1,12 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DELEITE.Views.DeleiteLoginPage">
+             x:Class="DELEITE.Views.DeleiteLoginPage"
+             BackgroundColor="black">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="40"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
+
+            <Image Source="logo.jpg" WidthRequest="200" HeightRequest="250"></Image>
+
+            <Entry x:Name="txtUserName" Placeholder="Username" TextColor="white" PlaceholderColor="white" ></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="white" PlaceholderColor="white"></Entry>
+            <Button x:Name="BtnLogin" VerticalOptions="Center" Text="login" TextColor="white" BackgroundColor="Transparent" BorderColor="LightPink" BorderWidth="1.5" CornerRadius="50" Clicked="Button_Clicked"></Button>
+            <Button x:Name="BtnSignUp" VerticalOptions="Center" Text="Sign Up" TextColor="white" BackgroundColor="Transparent" BorderColor="LightPink" BorderWidth="1.5" CornerRadius="50" Clicked="BtnSignUp_Clicked"></Button>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Forget you password? " TextColor="White"/>
+                        <Span Text="Recover?  " TextColor="White" FontAttributes="Bold" TextDecorations="Underline"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+                
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
