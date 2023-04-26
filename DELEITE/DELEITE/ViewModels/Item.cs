@@ -5,9 +5,7 @@
      
         public string NameItem { get; set; } 
         
-        public int SellPrice { get; set; }
        
 
-        public string imgsource { get; set; }
     }
 }
