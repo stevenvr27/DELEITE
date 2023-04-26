@@ -11,6 +11,7 @@ using Xamarin.Forms.Xaml;
 using DELEITE.Models;
 using DELEITE.Views;
 using DELEITE.ViewModels;
+using DELEITE.Views.bd;
 
 namespace DELEITE.Views
 {
@@ -80,7 +81,7 @@ namespace DELEITE.Views
 
             if (R)
             {
-                await Navigation.PushAsync(new MainPage());
+                await Navigation.PushAsync(new Detail());
 
                 return;
             }

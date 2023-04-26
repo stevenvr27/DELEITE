@@ -10,14 +10,13 @@ using Xamarin.Forms.Xaml;
 namespace DELEITE.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : MasterDetailPage
+    public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            this.Master = new Master();
-            this.Detail = new NavigationPage(new Detail());
-            App.Mast = this;
+           
+           
         }
     }
 }
