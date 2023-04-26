@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using DELEITE.Models;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace DELEITE.ViewModels
@@ -14,6 +15,9 @@ namespace DELEITE.ViewModels
         public UserRole MyUserRole { get; set; }
 
         public UserStatus MyStatus { get; set; }
+
+       // public Email MyEmail { get; set; }
+        //public RecoveryCode MyRecoveryCode { get; set; }
 
         public User MyUser { get; set; }
 
@@ -57,7 +61,7 @@ namespace DELEITE.ViewModels
                                        string pIDNumber,
                                        string pPhoneNumber,
                                        string pAddress,
-                                          int pUserRole=2,
+                                          int pUserRole = 2,
                                        int pUserStatus = 2)
         {
             if (IsBusy) return false;
@@ -70,10 +74,10 @@ namespace DELEITE.ViewModels
                 MyUser.Name = pName;
                 MyUser.PhoneNumber = pPhoneNumber;
                 MyUser.Address = pAddress;
-               
+
                 MyUser.CardId = pIDNumber;
 
-                  MyUser.UserRoleId= pUserRole;
+                MyUser.UserRoleId = pUserRole;
                 MyUser.UserStatusId = pUserStatus;
 
                 bool R = await MyUser.AddUser();
@@ -95,6 +99,53 @@ namespace DELEITE.ViewModels
 
         }
 
+        //public async Task<bool> AddRecoveryCode(string pEmail)
+       // {
+         //   if (IsBusy) return false;
+         //   IsBusy = true;
+
+         //   try
+         //   {
+         //       MyRecoveryCode.Email = pEmail;
+
+            //    string RecoveryCode = "ABC123";
+
+                //TAREA: Generar un código aleatorio de 6 digitos entre letras mayúsculas y numeros
+                //ejemplos: QWE456, OPI654, etc
+
+           //     MyRecoveryCode.RecoveryCode1 = RecoveryCode;
+            //    MyRecoveryCode.RecoveryCodeId = 0;
+
+             //   bool R = await MyRecoveryCode.AddRecoveryCode();
+
+                //una vez que se haya guardado correctamente el rec code, se envía el email 
+            //    if (R)
+            //    {
+              //      MyEmail.SendTo = pEmail;
+              //      MyEmail.Subject = "AutoAPPO Password Recovery Code";
+
+              //      MyEmail.Message = string.Format("Your recovery code for AutoAPPO is: {0}", RecoveryCode);
+
+              //      R = MyEmail.SendEmail();
+            //
+              //  }
+
+             //   return R;
+
+          //  }
+          //  catch (Exception)
+         //   {
+          //      return false;
+          //      throw;
+          //  }
+          //  finally
+          //  {
+          //      IsBusy = false;
+          //  }
+
+       // }
+
+
 
     }
-    }
+}

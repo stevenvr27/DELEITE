@@ -12,19 +12,35 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="MainPage.xaml.cs" />
+    <Compile Remove="Views\bd\Menu.xaml.cs" />
     <Compile Remove="Views\LoginPage.xaml.cs" />
+    <Compile Remove="Views\MenuPage.xaml.cs" />
+    <Compile Remove="Views\MenuPage\bodypage.xaml.cs" />
+    <Compile Remove="Views\MenuPage\FinalpartPage.xaml.cs" />
+    <Compile Remove="Views\MenuPage\IntroductionPage.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="MainPage.xaml" />
+    <EmbeddedResource Remove="Views\bd\Menu.xaml" />
     <EmbeddedResource Remove="Views\LoginPage.xaml" />
+    <EmbeddedResource Remove="Views\MenuPage.xaml" />
+    <EmbeddedResource Remove="Views\MenuPage\bodypage.xaml" />
+    <EmbeddedResource Remove="Views\MenuPage\FinalpartPage.xaml" />
+    <EmbeddedResource Remove="Views\MenuPage\IntroductionPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.0.35" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.12" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="RestSharp" Version="110.2.0" />
+    <PackageReference Include="Sharpnado.Shadows" Version="1.2.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
+    <PackageReference Include="Xamarin.Forms.OpenWhatsApp" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Plugin.SharedTransitions" Version="2.4.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,34 +48,43 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\BillisPage.xaml">
+    <EmbeddedResource Update="Views\bd\BillisPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Buy.xaml">
+    <EmbeddedResource Update="Views\bd\Buy.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\DeleiteLoginPage.xaml">
+    <EmbeddedResource Update="Views\MenuPage\menup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Detail.xaml">
+    <EmbeddedResource Update="Views\login\DeleiteLoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainPage.xaml">
+    <EmbeddedResource Update="Views\MenuPage\Detail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Master.xaml">
+    <EmbeddedResource Update="Views\MenuPage\PiePagina.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MenuPage.xaml">
+    <EmbeddedResource Update="Views\MenuPage\socialmedia.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\OffersPage.xaml">
+    <EmbeddedResource Update="Views\MenuPage\whats.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\SignUpPage.xaml">
+    <EmbeddedResource Update="Views\vs\Master.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\UsPage.xaml">
+    <EmbeddedResource Update="Views\bd\OffersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\login\PasswordRecoveryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\login\SignUpPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\bd\UsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

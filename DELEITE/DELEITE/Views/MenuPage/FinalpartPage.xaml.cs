@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace DELEITE.Views
+namespace DELEITE.Views.MenuPage
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Detail : ContentPage
+    public partial class FinalpartPage : ContentView
     {
-        public Detail()
+        public FinalpartPage()
         {
             InitializeComponent();
         }

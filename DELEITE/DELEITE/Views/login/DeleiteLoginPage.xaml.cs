@@ -34,9 +34,9 @@ namespace DELEITE.Views
             await Navigation.PushAsync(new SignUpPage());
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new PasswordRecoveryPage());
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
@@ -92,7 +92,17 @@ namespace DELEITE.Views
 
         }
 
-
+        private void SwShowPassword_Toggled(object sender, ToggledEventArgs e)
+        {
+            if (SwShowPassword.IsToggled)
+            {
+                txtPassword.IsPassword = false;
+            }
+            else
+            {
+                txtPassword.IsPassword = true;
+            }
+        }
     }
 
     }

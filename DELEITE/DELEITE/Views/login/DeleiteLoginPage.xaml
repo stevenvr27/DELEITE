@@ -2,17 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DELEITE.Views.DeleiteLoginPage"
-             BackgroundColor="black">
-    <ContentPage.Content>
+             >
+    <Grid>
+        <Image Source="https://img.freepik.com/vector-gratis/fondo-degradado-tonos-verdes_23-2148373476.jpg"
+               Aspect="AspectFill"/>
+   
+     
         <StackLayout Padding="40"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
 
-            <Image Source="logo.jpg" WidthRequest="200" HeightRequest="250"></Image>
+            <ImageButton Source="logo.jpg" WidthRequest="200" HeightRequest="250" CornerRadius="9000" BackgroundColor="Transparent" ></ImageButton>
 
             <Entry x:Name="txtUserName" Placeholder="Username" TextColor="white" PlaceholderColor="white" ></Entry>
-            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="white" PlaceholderColor="white"></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="white" PlaceholderColor="white"/>
             <Button x:Name="BtnLogin" VerticalOptions="Center" Text="login" TextColor="white" BackgroundColor="Transparent" BorderColor="LightPink" BorderWidth="1.5" CornerRadius="50" Clicked="Button_Clicked"></Button>
             <Button x:Name="BtnSignUp" VerticalOptions="Center" Text="Sign Up" TextColor="white" BackgroundColor="Transparent" BorderColor="LightPink" BorderWidth="1.5" CornerRadius="50" Clicked="BtnSignUp_Clicked"></Button>
-            <Label HorizontalOptions="Center">
+                <Switch x:Name="SwShowPassword" BackgroundColor="Transparent"  IsToggled="False" Toggled="SwShowPassword_Toggled" />
+                <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="Forget you password? " TextColor="White"/>
@@ -25,5 +30,6 @@
                 
             </Label>
         </StackLayout>
-    </ContentPage.Content>
+    
+    </Grid>
 </ContentPage>

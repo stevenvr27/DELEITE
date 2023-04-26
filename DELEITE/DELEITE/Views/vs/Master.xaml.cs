@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DELEITE.Views.bd;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,11 @@ namespace DELEITE.Views
             InitializeComponent();
         }
 
-        private async void Menu_Clicked(object sender, EventArgs e)
-        {
-            App.Mast.IsPresented = false;
-            await App.Mast.Detail.Navigation.PushAsync(new MenuPage());
-        }
+       // private async void Menu_Clicked(object sender, EventArgs e)
+      //  {
+           // App.Mast.IsPresented = false;
+           // await App.Mast.Detail.Navigation.PushAsync(new MenuPage());
+       // }
 
         private async void buy_Clicked(object sender, EventArgs e)
         {
@@ -45,6 +46,12 @@ namespace DELEITE.Views
         {
             App.Mast.IsPresented = false;
             await App.Mast.Detail.Navigation.PushAsync(new UsPage());
+        }
+
+        private async void Menu_Clicked(object sender, EventArgs e)
+        {
+            App.Mast.IsPresented = false;
+            await App.Mast.Detail.Navigation.PushAsync(new menup());
         }
     }
 }

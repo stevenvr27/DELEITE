@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sh="http://sharpnado.com"
+             x:Class="DELEITE.Views.bd.menup">
+
+
+
+
+    <Grid RowDefinitions="180,*" 
+          Padding="12"  HeightRequest="80"
+          BackgroundColor="White">
+          
+        <Frame CornerRadius="20"
+               HasShadow="False"
+               Grid.Row="1">
+            <StackLayout Margin="0,40,0,0"
+                         HorizontalOptions="Center">
+                <Label Text="{Binding descripcion}"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       TextColor="Black"/>
+                <Label Text="Hot y Spicy"
+                       />
+                <Label Text="hola"
+                       TextColor="#EA6A8B"
+                       FontAttributes="Bold"
+                       FontSize="25"
+                       HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </Frame>
+        <Image  
+               />
+
+    
+    
+    
+    </Grid>
+
+
+
+
+</ContentPage>
