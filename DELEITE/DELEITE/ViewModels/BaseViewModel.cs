@@ -9,7 +9,7 @@ namespace DELEITE.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<ItemVM> DataStore => DependencyService.Get<IDataStore<ItemVM>>();
 
         bool isBusy = false;
         public bool IsBusy

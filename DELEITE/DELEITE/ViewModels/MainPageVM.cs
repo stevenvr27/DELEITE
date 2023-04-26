@@ -1,19 +1,22 @@
-﻿using DELEITE.Models;
+﻿using DELEITE.APPMODELS;
+using DELEITE.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DELEITE.ViewModels
 {
    public  class MainPageVM
     {
-        public ObservableCollection<Items> cosas { get; set; }
+        public ObservableCollection<Products> cosas { get; set; }
         public MainPageVM()
         {
-            cosas = new ObservableCollection<Items>
+            cosas = new ObservableCollection<Products>
+            
        {
-         new Items
+         new Products
           {
              Name = "Brunchbox",
              Price =7000,
@@ -21,7 +24,7 @@ namespace DELEITE.ViewModels
              HasOffer = false
           },
 
-           new Items
+           new Products
           {
              Name = "Browniepizza",
              Price = 14000,
@@ -30,7 +33,7 @@ namespace DELEITE.ViewModels
              OfferPrice = 12000,
           },
 
-            new Items
+            new Products
           {
              Name = "S'mores box",
              Price = 15,
@@ -38,7 +41,7 @@ namespace DELEITE.ViewModels
              HasOffer = false
           },
 
-           new Items
+           new Products
           {
              Name = "Donitas",
              Price = 12,
@@ -46,7 +49,7 @@ namespace DELEITE.ViewModels
              HasOffer = false
           },
 
-           new Items
+           new Products
           {
              Name = "Ramos De Fresas",
              Price = 13,
@@ -55,17 +58,19 @@ namespace DELEITE.ViewModels
              OfferPrice = 10
           },
 
-           new Items
+           new Products
           {
              Name = "Cajitas De Desayuno",
              Price = 16,
              Image = "desayuno5.jpg",
              HasOffer = false
-
            }
-   };
-
-
+            };
         }
+
+       
+       
+
+
     }
 }

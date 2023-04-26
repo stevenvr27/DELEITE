@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DELEITE.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
@@ -12,9 +13,11 @@ namespace DELEITE.Models
         public decimal Pirice { get; set; }
         public int CounterId { get; set; }
 
-        public virtual Billing BillingBilling { get; set; } = null!;
-        public virtual Counter Counter { get; set; } = null!;
-        public virtual Items? ItemIditemNavigation { get; set; } = null!;
+        public int Mount { get; set; }
+
+        public virtual Billing? BillingBilling { get; set; } = null!;
+        public virtual Counter? Counter { get; set; } = null!;
+        public virtual Item? ItemIditemNavigation { get; set; } = null!;
 
     }
 }

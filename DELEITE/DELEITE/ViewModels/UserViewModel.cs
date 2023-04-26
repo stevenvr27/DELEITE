@@ -16,6 +16,8 @@ namespace DELEITE.ViewModels
 
         public UserStatus MyStatus { get; set; }
 
+        public Buy mybuy {get; set; }
+
        // public Email MyEmail { get; set; }
         //public RecoveryCode MyRecoveryCode { get; set; }
 
@@ -26,6 +28,42 @@ namespace DELEITE.ViewModels
             MyUser = new User();
             MyUserRole = new UserRole();
             MyStatus = new UserStatus();
+            mybuy = new Buy();
+        }
+
+        public async Task<ObservableCollection<Buy>> GetAppoList(int pUserID)
+        {
+
+            if (IsBusy) return null;
+            IsBusy = true;
+
+            try
+            {
+                ObservableCollection<Buy> list = new ObservableCollection<Buy>();
+
+                mybuy.UserId = pUserID;
+
+                list = await mybuy.GetbuyListByUser();
+
+                if (list == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return list;
+                }
+
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                IsBusy = false;
+            }
 
         }
 
