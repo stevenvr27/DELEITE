@@ -3,7 +3,7 @@
     public class Item
     {
      
-        public string NameItem { get; set; } = null!;
+        public string NameItem { get; set; } 
         
         public int SellPrice { get; set; }
        

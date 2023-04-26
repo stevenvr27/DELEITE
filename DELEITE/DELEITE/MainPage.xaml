@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DELEITE.MainPage">
 
+    <collectionview itemssource ="{binding product}" ></collectionview>
+    
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="hola!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
