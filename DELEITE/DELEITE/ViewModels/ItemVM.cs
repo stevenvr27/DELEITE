@@ -16,23 +16,21 @@ namespace DELEITE.ViewModels
         }
 
 
-        public async Task<List<Models.Item>> Getitems()
+        public async Task<List<Item>> Getitem()
         {
             try
             {
-                List<Models.Item> itemss = new List<Models.Item>();
+                List<Item> items = new List<Item>();
 
-                itemss = await ite.Getitems();
-
-                if (itemss == null)
+                items = await ite.Listitems();
+                if (items == null)
                 {
                     return null;
                 }
                 else
                 {
-                    return itemss;
+                    return items;
                 }
-
             }
             catch (Exception)
             {
@@ -41,7 +39,6 @@ namespace DELEITE.ViewModels
             }
 
         }
-
 
     }
 }

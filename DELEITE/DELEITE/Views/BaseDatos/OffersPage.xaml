@@ -3,10 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DELEITE.Views.OffersPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+         <CollectionView BackgroundColor="Black" ItemsSource="{Binding cosas}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate  >
+                    
+                <Frame Padding="30"  
+                       CornerRadius="60"
+                       IsClippedToBounds="False"
+                     
+                       > 
+                    <Grid  BackgroundColor="Transparent">
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".10*"/>
+                            <ColumnDefinition Width=".50*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height=".50*"/>
+                            <RowDefinition Height=".50*"/>
+                            
+                        </Grid.RowDefinitions >
+
+                        <ImageButton  Grid.RowSpan="10" HorizontalOptions="Fill" VerticalOptions="CenterAndExpand"
+                           Source="{Binding Image}"
+                                />
+                         
+                    </Grid>
+                </Frame>
+
+
+
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+
+    </CollectionView>
+
+
+
+
     </ContentPage.Content>
 </ContentPage>

@@ -14,16 +14,22 @@ namespace DELEITE.Models
         public RestRequest Request { get; set; }
         const string MineType = "application/json";
         const string ContentType = "application/json";
-        public User() { 
+        public User(Func<string, object> findByName) { 
         
         }
+
+        public User()
+        {
+        }
+
         public int UserId { get; set; }
-        public string Name { get; set; } = null!;
-        public string Email { get; set; } = null!;
-        public string CardId { get; set; } = null!;
-        public string LoginPassword { get; set; } = null!;
-        public string Address { get; set; } = null!;
-        public string PhoneNumber { get; set; } = null!;
+        public string? Name { get; set; } = null!;
+        
+        public string? Email { get; set; } = null!;
+        public string? CardId { get; set; } = null!;
+        public string? LoginPassword { get; set; } = null!;
+        public string? Address { get; set; } = null!;
+        public string? PhoneNumber { get; set; } = null!;
         public int UserRoleId { get; set; }
         public int UserStatusId { get; set; }
 

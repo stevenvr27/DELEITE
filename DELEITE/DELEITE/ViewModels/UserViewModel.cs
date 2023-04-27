@@ -22,37 +22,30 @@ namespace DELEITE.ViewModels
         //public RecoveryCode MyRecoveryCode { get; set; }
 
         public User MyUser { get; set; }
+        public UserDTO MyUserDTO { get; set; }
 
         public UserViewModel()
         {
             MyUser = new User();
             MyUserRole = new UserRole();
             MyStatus = new UserStatus();
+            MyUserDTO = new UserDTO();
             mybuy = new Buy();
         }
-
-        public async Task<ObservableCollection<Buy>> GetAppoList(int pUserID)
+        public async Task<UserDTO> GetUserData(string pUsername)
         {
-
             if (IsBusy) return null;
             IsBusy = true;
-
             try
             {
-                ObservableCollection<Buy> list = new ObservableCollection<Buy>();
+                UserDTO user = new UserDTO();
+                user = await MyUserDTO.GetUserData(pUsername);
 
-                mybuy.UserId = pUserID;
-
-                list = await mybuy.GetbuyListByUser();
-
-                if (list == null)
+                if (user == null)
                 {
                     return null;
                 }
-                else
-                {
-                    return list;
-                }
+                return user;
 
             }
             catch (Exception)
@@ -60,12 +53,9 @@ namespace DELEITE.ViewModels
                 return null;
                 throw;
             }
-            finally
-            {
-                IsBusy = false;
-            }
-
+            finally { IsBusy = false; }
         }
+
 
         public async Task<bool> UserAccessValidation(string pEmail, string pPassword)
         {

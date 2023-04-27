@@ -58,9 +58,6 @@ namespace DELEITE.Views
 
                     R = await viewModel.UserAccessValidation(email, password);
 
-
-
-
                 }
                 catch (Exception)
                 {
@@ -81,7 +78,8 @@ namespace DELEITE.Views
 
             if (R)
             {
-                await Navigation.PushAsync(new Detail());
+                GlobalObjects.LocalUser = await viewModel.GetUserData(txtUserName.Text.Trim());
+                await Navigation.PushAsync(new PaginaPrincipal());
 
                 return;
             }

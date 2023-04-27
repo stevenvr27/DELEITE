@@ -4,42 +4,46 @@ using System.Collections.Generic;
 using System.Text;
 using RestSharp;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace DELEITE.ViewModels
 {
     public  class buyvm:BaseViewModel
     {
-        RestRequest request;
-        public Buy Mybuy { get; set; }
-
+        public Buy MyBuy { get; set; }
         public buyvm()
         {
-            Mybuy = new Buy();
+            MyBuy = new Buy();
         }
-        public async Task<bool> Addbuy()
+        public async Task<ObservableCollection<Buy>> Getlistbuy(int puserid)
         {
-            if (IsBusy) return false;
+            if (IsBusy) return null;
             IsBusy = true;
 
             try
             {
+                ObservableCollection<Buy> list = new ObservableCollection<Buy>();
+                MyBuy.UserId = puserid;
+                list = await MyBuy.GetBuyByUser();
+
+                if (list == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return list;
+                }
 
             }
             catch (Exception)
             {
-                return false;
+
                 throw;
             }
-            finally
-            {
-                IsBusy = false;
-            }
-
-
-
         }
 
-       
+
 
     }
 }

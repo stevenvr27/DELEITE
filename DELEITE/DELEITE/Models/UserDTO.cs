@@ -12,18 +12,23 @@ namespace DELEITE.Models
     {
         public RestRequest Request { get; set; }
 
-       public int IDUsuario { get; set; }
-         public string Nombre { get; set; } = null!;
-         public string Correo { get; set; } = null!;
-         public string Cedula{ get; set; } = null!;
-         public string NumeroTelefono { get; set; } = null!;
-        public string Contrasennia { get; set; } = null!;
-         
-         public string? Direccion { get; set; }
-         public int IdRol { get; set; }
-         public int IdEstado { get; set; }
-         public string EstadoDescripcion { get; set; } = null!;
-          public string RolDescripcion { get; set; } = null!;
+        public int UsuarioID { get; set; }
+        public string? UsuarioNombre { get; set; } = null!;
+        public string? PrimerNombre { get; set; } = null!;
+        public string? Apellidos { get; set; } = null!;
+        public string? Numero { get; set; }
+        public string? Contrasennia { get; set; } = null!;
+        public int contadordemalas { get; set; }
+        public string? correorespaldo { get; set; } = null!;
+        public string? trabajoDescripcion { get; set; }=null!;
+
+        public int estadoId { get; set; }
+        public int CiudadId { get; set; }
+        public int RoleId { get; set; }
+
+        public string? Ciudad { get; set; } = null!;
+        public string? roles { get; set; } = null!;
+        public string? estados { get; set; } = null!;
 
         //FUNCIONES
         public async Task<UserDTO> GetUserData(string email)

@@ -16,26 +16,29 @@ namespace DELEITE.Views
     public partial class Buy : ContentPage
     {
         buyvm buyvm;
-        Models.Item Items;
+        ItemVM itemVM;
+        ToppingVM topi;
+        
         public Buy()
         {
             InitializeComponent();
-            BindingContext = buyvm = new buyvm();
-            
+            BindingContext = topi= new ToppingVM();
+            BindingContext = itemVM = new ItemVM();
+            loadlist();
+             
+             
+           
+        }
+        private async void loadlist()
+        {
+            s.ItemsSource = await topi.gettop();
+        }
+        
 
-        private async void BtnCancel_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PopAsync();
-            loaditems();
-        }
-        private async void loaditems()
-        {
-            Itemspc.ItemsSource = await Items.Getitems();
-        }
 
-        private async void BtnApply_Clicked(object sender, EventArgs e)
-        {
-            
-        }
+
+
+
+
     }
 }

@@ -19,7 +19,7 @@ namespace DELEITE.ViewModels
          new Products
           {
              Name = "Brunchbox",
-             Price =7000,
+             Des = "Escogela a tu gusto ",
              Image = "Desayuno.jpg",
              HasOffer = false
           },
@@ -27,24 +27,24 @@ namespace DELEITE.ViewModels
            new Products
           {
              Name = "Browniepizza",
-             Price = 14000,
+             
              Image = "queque.jpg" ,
-             HasOffer = true,
-             OfferPrice = 12000,
+            
+             Des = "Podes armarla como gustes  ",
           },
 
             new Products
           {
              Name = "S'mores box",
-             Price = 15,
-             Image = "desayuno1.jpg",
+               Image = "desayuno1.jpg",
+             Des = "Crugiente echa con mucho amor para ti ",
              HasOffer = false
           },
 
            new Products
           {
              Name = "Donitas",
-             Price = 12,
+              Des = " Pqueñas con muhco sabor",
              Image = "donas.jpg",
              HasOffer = false
           },
@@ -52,16 +52,15 @@ namespace DELEITE.ViewModels
            new Products
           {
              Name = "Ramos De Fresas",
-             Price = 13,
+             Des = "Regala detalles que enamoran ",
              Image = "ramo.jpg",
-             HasOffer = true,
-             OfferPrice = 10
+             HasOffer = true 
           },
 
            new Products
           {
              Name = "Cajitas De Desayuno",
-             Price = 16,
+               Des = "Podes armarla como gustes  " ,
              Image = "desayuno5.jpg",
              HasOffer = false
            }

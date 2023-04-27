@@ -10,6 +10,8 @@ namespace DELEITE.APPMODELS
         public int Price { get; set; }
         public string Image { get; set; }
         public bool HasOffer { get; set; }
-        public int OfferPrice { get; set; }
+
+        public string Des { get; set; }
+
     }
 }

@@ -14,7 +14,7 @@ namespace DELEITE
             InitializeComponent();
 
             
-            MainPage = new NavigationPage(new Detail());
+            MainPage = new NavigationPage(new PaginaPrincipal());
         }
 
         protected override void OnStart()
