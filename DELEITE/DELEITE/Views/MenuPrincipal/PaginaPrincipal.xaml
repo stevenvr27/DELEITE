@@ -4,7 +4,6 @@
              xmlns:View="clr-namespace:DELEITE.ViewModels"
              x:Class="DELEITE.Views.Detail">
    
-   
     <ContentPage.BindingContext>
         <View:BaseViewModel/>
     </ContentPage.BindingContext>
@@ -60,23 +59,11 @@
  
 
                      
-
-
-
-
                 </Grid>
 
             </FlexLayout>
-        </ScrollView>
 
 
-
-
-
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Feeling adventurous?" TextColor="Black" FontSize="24" FontAttributes="Bold" Margin="15"/>
-            
-        </StackLayout>
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
             <StackLayout Margin="5" WidthRequest="120">
@@ -90,15 +77,9 @@
                  
 
             </StackLayout>
-            <StackLayout  Margin="5" WidthRequest="120">
-
-                <ImageButton Clicked="ImageButton_Clicked_3" HorizontalOptions="Center"  Source="logo" HeightRequest="100" BackgroundColor="Transparent"   />
-                 
 
             </StackLayout>
              
-
-
         </StackLayout>
 
 
