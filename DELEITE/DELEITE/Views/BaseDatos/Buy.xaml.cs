@@ -22,7 +22,6 @@ namespace DELEITE.Views
             InitializeComponent();
             BindingContext = buyvm = new buyvm();
             
-        }
 
         private async void BtnCancel_Clicked(object sender, EventArgs e)
         {
