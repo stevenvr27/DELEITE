@@ -21,7 +21,6 @@ namespace DELEITE.Views
         {
             InitializeComponent();
             BindingContext = buyvm = new buyvm();
-            BindingContext = Items = new Models.Item();
             
         }
 

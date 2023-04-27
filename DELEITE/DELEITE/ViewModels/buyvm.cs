@@ -23,18 +23,6 @@ namespace DELEITE.ViewModels
 
             try
             {
-                 Mybuy.BuyId = 0;  
-                 Mybuy.BuyDate = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-                 Mybuy.BuyNumber = 0;
-                 Mybuy.BuyNotes=null;
-                 Mybuy.Active = true;
-                Mybuy.UserId = GlobalObjects.LocalUser.IDUsuario;
-                
-
-
-              bool R = await Mybuy.Addbuynew();
-
-                return R;
 
             }
             catch (Exception)
