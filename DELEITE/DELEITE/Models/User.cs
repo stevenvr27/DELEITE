@@ -14,9 +14,7 @@ namespace DELEITE.Models
         public RestRequest Request { get; set; }
         const string MineType = "application/json";
         const string ContentType = "application/json";
-        public User(Func<string, object> findByName) { 
         
-        }
 
         public User()
         {
@@ -32,11 +30,8 @@ namespace DELEITE.Models
         public string? PhoneNumber { get; set; } = null!;
         public int UserRoleId { get; set; }
         public int UserStatusId { get; set; }
-
         public virtual UserRole? UserRole { get; set; } = null!;
         public virtual UserStatus? UserStatus { get; set; } = null!;
-        public virtual ICollection<Billing>? Billings { get; set; } = null;
-        public virtual ICollection<Buy>? Buys { get; set; }= null;
 
 
 

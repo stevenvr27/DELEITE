@@ -100,7 +100,6 @@ namespace DELEITE.ViewModels
                 MyUser.Email = pEmail;
                 MyUser.LoginPassword = pPassword;
                 MyUser.Name = pName;
-                MyUser.PhoneNumber = pPhoneNumber;
                 MyUser.Address = pAddress;
 
                 MyUser.CardId = pIDNumber;

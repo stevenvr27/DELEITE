@@ -10,7 +10,6 @@ namespace DELEITE.Models
         public decimal Descount { get; set; }
         public string? Description { get; set; } = null!;
         public bool Status { get; set; }
-        public int BuyId { get; set; }
 
         public virtual Buy? Buy { get; set; } = null!;
 
